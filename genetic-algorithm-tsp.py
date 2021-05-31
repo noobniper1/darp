@@ -1,5 +1,9 @@
 import numpy as np, random, operator, pandas as pd, matplotlib.pyplot as plt
 
+#load distance from a matrix
+#fill the matrix from google maps
+
+
 #City class: coordinates of a place
 
 class City:
@@ -158,9 +162,8 @@ def nextGeneration(currentGen, eliteSize, mutationRate):
 
 def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations):
 	pop = initialPopulation(popSize, population)
-	
-	print("population = ", len(pop[0]))
-	
+	print("initial route = ", pop[0])
+
 	progress = []
 	progress.append(1 / rankRoutes(pop)[0][1])
 	
@@ -186,36 +189,8 @@ cityList = []
 for i in range(0, 25):
 	cityList.append(City(x=int(random.random() * 200), y=int(random.random() * 200)))
 
+bestRoute = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
 
-geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("best route = ", bestRoute)
 
 
