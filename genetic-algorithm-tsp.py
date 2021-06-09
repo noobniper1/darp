@@ -1,4 +1,5 @@
 import numpy as np, random, operator, pandas as pd, matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
 
 #load distance from a matrix
 #fill the matrix from google maps
@@ -185,12 +186,22 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations):
 	return bestRoute
 
 cityList = []
+xList = []
+yList = []
 
 for i in range(0, 25):
-	cityList.append(City(x=int(random.random() * 200), y=int(random.random() * 200)))
+	x=int(random.random() * 200)
+	y=int(random.random() * 200)
+	xList.append(x)
+	yList.append(y)
+	cityList.append(City(x, y))
 
-bestRoute = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
+#show cities
+plt.scatter(xList, yList, marker='o');
+plt.show()
 
-print("best route = ", bestRoute)
+#bestRoute = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
+
+#print("best route = ", bestRoute)
 
 
