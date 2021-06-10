@@ -97,9 +97,9 @@ if __name__ == '__main__':
     CityCoordinates = city_location[:]
 
          # Parameter
-    CityNum = 20# City quantity
+    CityNum = 25# City quantity
     MinCoordinate = 0# 2D coordinate minimum value
-    MaxCoordinate = 100# 2D coordinate maximum
+    MaxCoordinate = 200# 2D coordinate maximum
     
     #TSParameter
     tabu_limit = 50 #Taboo length, this value should be less than(CityNum*(CityNum-1)/2）

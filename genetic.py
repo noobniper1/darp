@@ -72,10 +72,12 @@ def selection(population):
     '''
     M = population_size
     parents = []
+    tabu_list = []
+    tabu_length = 5
     for i in range(M):
     #to do: tabu search
-        if random.random() < (1 - i/M):
-            parents.append(population[i])
+        #if random.random() < (1 - i/M):
+        #    parents.append(population[i])
     return parents
 def CPX(parent1,parent2):
     '''
