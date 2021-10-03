@@ -11,5 +11,5 @@ with open('cities.txt', 'a') as the_file:
         th=random.randint(8, 18)
         tm=random.randint(0, 59)
         the_file.write('{} {} {} {} {}\n'.format(i, x, y, th, tm))
-
+# if created 
 print("The file was successfully created")
